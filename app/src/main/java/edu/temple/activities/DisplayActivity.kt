@@ -11,10 +11,7 @@ class DisplayActivity : AppCompatActivity() {
 
         val newSize = intent.getIntExtra("textSizes", 0)
 
-        with (findViewById<TextView>(R.id.lyricsDisplayTextView)) {
-            textSize = newSize.toFloat()
-        }
-
+        with (findViewById<TextView>(R.id.lyricsDisplayTextView)) { textSize = newSize.toFloat() }
 
     }
 }
