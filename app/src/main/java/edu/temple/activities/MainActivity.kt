@@ -9,6 +9,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
+const val TEXT_SIZE_KEY = "textSizes"
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +28,7 @@ class MainActivity : AppCompatActivity() {
             val lyricsDisplayTextView = findViewById<TextView>(R.id.lyricsDisplayTextView)
             adapter = TextSizeAdapter(textSizes) {
                 val intent = Intent(this@MainActivity, DisplayActivity::class.java)
-                intent.putExtra("textSizes", it)
+                intent.putExtra(TEXT_SIZE_KEY, it)
                 startActivity(intent)
             }
 
