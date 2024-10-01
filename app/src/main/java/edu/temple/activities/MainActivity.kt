@@ -27,9 +27,7 @@ class MainActivity : AppCompatActivity() {
 
             val lyricsDisplayTextView = findViewById<TextView>(R.id.lyricsDisplayTextView)
             adapter = TextSizeAdapter(textSizes) {
-                val intent = Intent(this@MainActivity, DisplayActivity::class.java)
-                intent.putExtra(TEXT_SIZE_KEY, it)
-                startActivity(intent)
+                startActivity(Intent(this@MainActivity, DisplayActivity::class.java).putExtra(TEXT_SIZE_KEY, it))
             }
 
             layoutManager = LinearLayoutManager(this@MainActivity)
